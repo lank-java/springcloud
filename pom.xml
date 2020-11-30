@@ -12,6 +12,11 @@
         <module>eureka/eureka-server</module>
         <module>eureka/eureka-client</module>
         <module>eureka/eureka-consumer</module>
+        <module>ribbon/ribbon-consumer</module>
+        <module>feign/feign-consumer</module>
+        <module>feign/feign-client-interface</module>
+        <module>feign/feign-client</module>
+        <module>feign/feign-consumer-advance</module>
     </modules>
 
     <dependencyManagement>

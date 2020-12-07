@@ -27,13 +27,20 @@ public class HelloController implements IService{
 
     public String retry(Integer timeout) {
         log.info("这是"+port);
-        while (timeout-->0){
+        while (timeout>0){
             try {
+                log.info("timeout:{}",timeout);
                 Thread.sleep(timeout*1000);
+                timeout--;
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
         return port;
+    }
+
+    public String error() {
+        log.info("这是测试服务降级的方法！");
+        throw  new RuntimeException("发生异常!!!!");
     }
 }
